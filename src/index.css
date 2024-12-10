@@ -1,43 +1,155 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+}
+
+:root {
+  font-family: "Ubuntu", sans-serif;
+  --primary-800: hsl(213, 96%, 18%);
+  --primary-400: hsl(243, 100%, 62%);
+  --primary-300: hsl(228, 100%, 84%);
+  --primary-200: hsl(206, 94%, 87%);
+  --secondary-400: hsl(354, 84%, 57%);
+  --neutral-400: hsl(231, 11%, 63%);
+  --neutral-300: hsl(229, 24%, 87%);
+  --neutral-200: hsl(217, 100%, 97%);
+  --neutral-100: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+p {
+  font-weight: 400;
+  color: var(--neutral-400);
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--primary-800);
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+button {
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  color: var(--neutral-400);
+  transition: filter 0.2s ease-in-out;
+}
+
+button:hover {
+  filter: brightness(1.5);
+}
+
+.custom__scrollbar::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.custom__scrollbar::-webkit-scrollbar-track {
+  background-color: var(--neutral-300);
+}
+
+.custom__scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-400);
+}
+
+@media (max-width: 450px) {
   :root {
-    /* Primary colors */
-    --marine-blue: hsl(213, 96%, 18%);
-    --purplish-blue: hsl(243, 100%, 62%);
-    --pastel-blue: hsl(228, 100%, 84%);
-    --light-blue: hsl(206, 94%, 87%);
-    --strawberry-red: hsl(354, 84%, 57%);
-    /* Neutral colors */
-    --cool-gray: hsl(231, 11%, 63%);
-    --light-gray: hsl(229, 24%, 87%);
-    --magnolia: hsl(217, 100%, 97%);
-    --alabaster: hsl(231, 100%, 99%);
-    --white: hsl(0, 0%, 100%);
+    font-size: clamp(5px, 4vw, 15px);
   }
-  
-  
-  @font-face {
-    font-family: 'ubuntu-bold';
-    src: url(../src//assets//fonts//Ubuntu-Bold.ttf);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--neutral-200);
+}
+
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-99999999px);
+}
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input__group > * {
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--primary-800);
+}
+
+.input__group label {
+  margin-left: 0.25rem;
+  font-weight: 500;
+}
+
+.input__group input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: 0.5rem;
+  background-color: var(--neutral-100);
+  outline: none;
+  font-weight: 500;
+}
+
+.input__group input::placeholder {
+  color: var(--neutral-400);
+}
+
+.input__group input:focus {
+  border-color: var(--primary-400);
+}
+
+.input__group:has(.error) input {
+  border-color: rgb(216, 32, 32);
+}
+
+.input__group .error {
+  position: absolute;
+  font-weight: 500;
+  right: 0;
+  font-size: 0.8rem;
+  color: rgb(216, 32, 32);
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0;
   }
-  
-  @font-face {
-    font-family: 'ubuntu-regular';
-    src: url(../src//assets//fonts/Ubuntu-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: 'ubuntu-medium';
-    src: url(../src//assets//fonts//Ubuntu-Medium.ttf);
-  }
-  
-  
-  body{
-    font-family: 'ubuntu-bold';
-    background: #f1f8f8;
-  }
+}
