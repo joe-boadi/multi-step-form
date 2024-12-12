@@ -16,8 +16,8 @@ type useValidationType = (
 
 const useValidation: useValidationType = (data, handleSubmit, onError) => {
     const [errors, setErrors] = useState({});
-    const [touched, setTouched] = useState(false);
-    const [submitting, setSubmitting] = useState(false);
+    const [, setTouched] = useState(false);
+    const [, setSubmitting] = useState(false);
 
     const validate = () => {
         const newErrors: any = {};
