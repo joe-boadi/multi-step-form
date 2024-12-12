@@ -1,4 +1,4 @@
-import AddOns from "./components/Addons";
+import AddOns from "./components/Addons/Addons";
 import Info from "./components/Info";
 import { Step } from "./components/MultiStepForm/types";
 import Plan from "./components/Plan/Plan";
