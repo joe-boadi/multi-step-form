@@ -3,8 +3,8 @@ import { addons } from "../data";
 import styles from "../assets/styles/Addons.module.css"
 
 const AddOns = (props: ComponentPropsType) => {
-    const { data, setData } = props; 
 
+    const { data, setData } = props; 
     const handleAddonClick = (addonTitle: string) => {
         setData((prevState: { addons: string[]; billing: 'Monthly' | 'Yearly' }) => {
             if (prevState.addons.includes(addonTitle)) {
@@ -20,7 +20,6 @@ const AddOns = (props: ComponentPropsType) => {
             }
         });
     };
-
     return (
         <form className={styles.form}>
             <h2>Pick add-ons</h2>
@@ -51,5 +50,4 @@ const AddOns = (props: ComponentPropsType) => {
         </form>
     );
 };
-
 export default AddOns;

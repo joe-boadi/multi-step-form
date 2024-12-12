@@ -53,5 +53,4 @@ const Summary = (props: ComponentPropsType) => {
 		</section>
 	);
 };
-
 export default Summary;

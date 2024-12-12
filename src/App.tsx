@@ -1,4 +1,5 @@
 import MultiStepForm from "../src/components/MultiStepForm/MultiStepForm";
+// import Homepage from "./components/Homepage";
 import { steps, SuccessPage } from "./steps";
 import { ObjectType } from "./type";
 
@@ -10,10 +11,11 @@ const initialValue = {
 
 function App() {
 	const handleSubmit = (data: ObjectType) => {
-		console.log(data);
+		return data
 	};
 	return (
 		<main className="container">
+		
 			<h1 className="sr-only">Multi Step Form</h1>
 			<MultiStepForm
 				steps={steps}

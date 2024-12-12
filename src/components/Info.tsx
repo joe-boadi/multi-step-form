@@ -10,7 +10,6 @@ const Info = (props: ComponentPropsType) => {
 		_data[name] = value;
 		setData(_data);
 	};
-
 	return (
 		<form className="form info">
 			<h2>Personal info</h2>
