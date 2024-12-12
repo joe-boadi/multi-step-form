@@ -13,30 +13,23 @@ type TogglePropTypes = {
 
 const Toggle = (props: TogglePropTypes) => {
 	const { name, options, data, setData } = props;
-	const [labels, values]: [string[], string[]] = [[], []];
-	options.map(ele => {
-		if (typeof ele === "string") {
-			labels.push(ele);
-			values.push(ele);
-		} else {
-			labels.push(ele.label);
-			values.push(ele.value);
-		}
-	});
 
+	// const [labels, values]: [string[], string[]] = [[], []];
+	const labels = options.map(element => (typeof element === 'string' ? element : element.label));
+	const values = options.map(element => (typeof element === 'string' ? element : element.value));
+	
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { checked } = e.target;
 		setData(previousState => ({ ...previousState, [name]: values[checked ? 1 : 0] }));
 	};
 
 	return (
-		<div className={styles.toggle}>
+		<aside className={styles.toggle}>
 			<h5 className={data[name] === values[0] ? `${styles.active}` : ""}>{labels[0]}</h5>
 			<input type="checkbox" id={name} checked={data[name] === values[1]} onChange={handleChange} />
 			<label htmlFor={name} tabIndex={0}></label>
 			<h5 className={data[name] === values[1] ? `${styles.active}` : ""}>{labels[1]}</h5>
-		</div>
+		</aside>
 	);
 };
-
 export default Toggle;
