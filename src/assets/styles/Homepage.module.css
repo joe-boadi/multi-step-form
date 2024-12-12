@@ -1,0 +1,17 @@
+.homepage {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.aside button {
+    border: none;
+    padding: 0.45rem;
+    background-color: var(--primary-400);
+    color: var(--neutral-300);
+    font-size: 16px;
+    margin: auto;
+}
