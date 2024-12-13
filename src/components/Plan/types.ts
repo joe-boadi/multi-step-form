@@ -1,6 +1,7 @@
 // import { FormData } from '../../type';
 import { Billing } from '../MultiStepForm/types';
 
+export type Plans = 'arcade' | 'advanced' | 'pro';
 export interface PlanOption {
     id: Plans;
     title: string;
@@ -10,9 +11,6 @@ export interface PlanOption {
     };
     icon: string;
 }
-
-export type Plans = 'arcade' | 'advanced' | 'pro';
-
 export interface PlanCardProps {
     plan: PlanOption;
     isSelected: boolean;

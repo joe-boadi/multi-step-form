@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { ObjectType } from "../../type";
+import { ObjectType } from "../../../type";
 import styles from "../../assets/styles/Plan.module.css";
 
 type OptionType = string | { label: string; value: string };
@@ -21,7 +21,7 @@ const Toggle = ({ name, options, data, setData }: ToggleProps) => {
     };
 
     return (
-        <aside className={styles.toggle}>
+        <aside className={styles.switch}>
             <h5 className={data[name] === values[0] ? `${styles.active}` : ""}>{labels[0]}</h5>
             <input 
                 type="checkbox" 
