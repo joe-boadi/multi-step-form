@@ -10,7 +10,6 @@ export type FormData = {
 	[key: string]: string | string[] | Billing; // Add an index signature
   };
 
-
 // Update ObjectType to be more specific
 export type ObjectType = FormData
 
