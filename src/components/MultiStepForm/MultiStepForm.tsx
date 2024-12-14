@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MultiStepFormPropsType } from "./types";
 import useValidation from "../../hooks/useValidation";
-import styles from "../../assets/styles/MultiStepForm.module.css";
+import styles from "./MultiStepForm.module.css";
 
 const MultiStepForm = (props: MultiStepFormPropsType) => {
 	const { steps, handleSubmit, initialValue, SuccessPage } = props;
@@ -84,5 +84,4 @@ const MultiStepForm = (props: MultiStepFormPropsType) => {
 		</div>
 	);
 };
-
 export default MultiStepForm;

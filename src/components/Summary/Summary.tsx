@@ -1,7 +1,7 @@
 import { ComponentPropsType } from "../../type";
 import { billingPlans, addons } from "../../data";
 import { Billing, Plans } from "../MultiStepForm/types";
-import styles from "../../assets/styles/Summary.module.css";
+import styles from "./Summary.module.css";
 
 const Summary = (props: ComponentPropsType) => {
 	const { data, setCurrentStep } = props;
@@ -25,8 +25,7 @@ const Summary = (props: ComponentPropsType) => {
 			</div>
 		);
 	});
-
-	return (
+	return(
 		<section className={styles.summary}>
 			<h2>Finishing up</h2>
 			<p>Double-check everything looks OK before confirming.</p>
@@ -36,7 +35,7 @@ const Summary = (props: ComponentPropsType) => {
 						<h3>
 							{plan} ({billing})
 						</h3>
-						<button onClick={changePlan}>Change</button>
+						<button onClick={changePlan}> Change </button>
 					</div>
 					<p className={styles.price}>
 						${price}/{billingText}

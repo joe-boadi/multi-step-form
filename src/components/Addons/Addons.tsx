@@ -1,6 +1,6 @@
 import { ComponentPropsType } from "../../type";
 import { addons } from "../../data";
-import styles from "../../assets/styles/Addons.module.css";
+import styles from "./Addons.module.css";
 import { AddOnItem } from "./AddOnItem";
 
 const AddOns = ({ data, setData }: ComponentPropsType) => {

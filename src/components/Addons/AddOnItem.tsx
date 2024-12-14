@@ -1,5 +1,5 @@
 import { AddOnProps } from './types';
-import styles from "../../assets/styles/Addons.module.css";
+import styles from "./Addons.module.css";
 
 export const AddOnItem = ({ addon, isSelected, billing, onSelect }: AddOnProps) => {
     return (

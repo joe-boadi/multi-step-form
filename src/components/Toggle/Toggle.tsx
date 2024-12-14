@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { ToggleProps } from "./types";
 import { parseToggleOptions } from "./utils";
-import styles from "../../assets/styles/Plan.module.css";
+import styles from "../../components/Plan/Plans.module.css";
 import { FormData } from "../../type";
 
 const Toggle = ({ name, options, data, setData }: ToggleProps) => {
@@ -15,7 +15,6 @@ const Toggle = ({ name, options, data, setData }: ToggleProps) => {
             [name]: newValue
         }));
     };
-
     const currentValue = data[name];
     return (
         <aside className={styles.toggle}>

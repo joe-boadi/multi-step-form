@@ -1,5 +1,5 @@
-import successImg from "../../assets/images/icon-thank-you.svg";
-import styles from  "../../assets/styles/Success.module.css";
+import successImg from "../../../public/images/icon-thank-you.svg";
+import styles from  "./Success.module.css";
 
 const Success = () => {
 	return (

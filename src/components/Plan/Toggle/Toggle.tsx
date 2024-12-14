@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { ObjectType } from "../../../type";
-import styles from "../../assets/styles/Plan.module.css";
+import styles from "./../Plans.module.css";
 
 type OptionType = string | { label: string; value: string };
 

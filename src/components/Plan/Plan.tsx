@@ -1,6 +1,6 @@
 import { ComponentPropsType } from "../../type";
 import Toggle from "../Toggle/Toggle";
-import styles from "../../assets/styles/Plan.module.css";
+import styles from "./Plans.module.css";
 import { PlanCard } from "./PlanCard";
 import { PlanData } from "./data";
 import { useState } from "react";
