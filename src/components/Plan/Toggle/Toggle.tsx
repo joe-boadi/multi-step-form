@@ -24,6 +24,7 @@ const Toggle = ({ name, options, data, setData }: ToggleProps) => {
         <aside className={styles.switch}>
             <h5 className={data[name] === values[0] ? `${styles.active}` : ""}>{labels[0]}</h5>
             <input 
+                autoComplete='on'
                 type="checkbox" 
                 id={name} 
                 checked={data[name] === values[1]} 

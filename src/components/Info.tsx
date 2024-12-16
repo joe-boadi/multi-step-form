@@ -11,14 +11,15 @@ const Info = (props: ComponentPropsType) => {
 		setData(_data);
 	};
 	return (
-		<form className="form info">
+		<form name="form" className="form info">
 			<h2>Personal info</h2>
 			<p>Please provide your name, email, address, and phone number.</p>
 			<div className="input__group">
 				<label htmlFor="name">Name</label>
 				<input
 					type="text"
-					placeholder="e.g. Stephen King"
+					placeholder="e.g. joe boadi"
+					autoComplete='on'
 					value={data.name || ""}
 					onChange={handleChange}
 					name="name"
@@ -30,7 +31,8 @@ const Info = (props: ComponentPropsType) => {
 				<label htmlFor="email">Email Address</label>
 				<input
 					type="text"
-					placeholder="e.g. Stephenking@lorem.com"
+					autoComplete='on'
+					placeholder="e.g. joeboadi@lorem.com"
 					value={data.email || ""}
 					onChange={handleChange}
 					name="email"
@@ -42,6 +44,7 @@ const Info = (props: ComponentPropsType) => {
 				<label htmlFor="phone">Phone Number</label>
 				<input
 					type="tel"
+					autoComplete='off'
 					placeholder="e.g. +1 234 567 890"
 					value={data.phone || ""}
 					onChange={handleChange}

@@ -28,6 +28,7 @@ const Plan = ({ data, setData }: ComponentPropsType) => {
 
   return (
     <div className={styles.planPage}>
+      <h2>Select Plan</h2>
       <div className={styles.planContainer}>
         {Data.map((plan, index) => (
           <PlanCard
@@ -38,7 +39,7 @@ const Plan = ({ data, setData }: ComponentPropsType) => {
             title={plan.title}
             key={plan.id}
             onSelect={() =>
-              handleSelect(index, plan.title, plan.price.Monthly.toString())
+            handleSelect(index, plan.title, plan.price.Monthly.toString())
             }
           />
         ))}

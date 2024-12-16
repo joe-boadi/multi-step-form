@@ -8,6 +8,7 @@ export const AddOnItem = ({ addon, isSelected, billing, onSelect }: AddOnProps) 
             onClick={() => onSelect(addon.title)}
         >
             <input
+                autoComplete='on'
                 type="checkbox"
                 checked={isSelected}
                 onChange={() => onSelect(addon.title)}

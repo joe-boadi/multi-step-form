@@ -22,6 +22,7 @@ const Toggle = ({ name, options, data, setData }: ToggleProps) => {
                 {labels[0]}
             </h5>
             <input
+                autoComplete='on'
                 className={``}
                 type="checkbox" 
                 id={`${name}`}

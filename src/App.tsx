@@ -1,4 +1,3 @@
-// import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import MultiStepForm from "../src/components/MultiStepForm/MultiStepForm";
 import { steps, SuccessPage } from "./steps";
